@@ -1,18 +1,25 @@
 import React from "react";
 import "./App.css";
 import ReactGA from "react-ga4";
-ReactGA.initialize("G-N9J19ZZYQV");
+ReactGA.initialize("G-H3P8JQJQ68");
 function App() {
   ReactGA.send({ hitType: "pageview", page: "/home" });
-  const handleClick = () => {
-    ReactGA.event({
-      category: "Login",
+  const handleLogin = () => {
+    ReactGA.event("Login",{
       action: "clicked",
+      label: "Handle Login",
+    });
+  };
+  const handleLogout = () => {
+    ReactGA.event("Logout",{
+      action: "clicked",
+      label: "Handle Logout",
     });
   };
   return (
     <div className="App">
-      <button onClick={handleClick}>Send Event</button>
+      <button onClick={handleLogin}>Login</button>
+      <button onClick={handleLogout}>Logout</button>
     </div>
   );
 }
