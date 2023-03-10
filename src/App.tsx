@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import ReactGA from "react-ga4";
-ReactGA.initialize("G-H3P8JQJQ68");
+ReactGA.initialize("G-BRK1J0G9BT");
 function App() {
   ReactGA.send({ hitType: "pageview", page: "/home" });
   const handleLogin = () => {
